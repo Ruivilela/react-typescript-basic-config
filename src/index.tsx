@@ -6,4 +6,4 @@ ReactDOM.render(
     {'something'}
   </div>,
   document.getElementById('root')
-)
+);
