@@ -1,6 +1,7 @@
 require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { resolve, join } = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 module.exports = {
   mode: 'development',
@@ -18,6 +19,20 @@ module.exports = {
         test: /\.(ts|tsx)$/,
         loaders: 'babel-loader',
         include: resolve(__dirname, '../')
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader"
+          },
+          {
+            loader: "sass-loader"
+          }
+        ]
       }
     ]
   },

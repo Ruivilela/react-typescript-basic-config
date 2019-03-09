@@ -7,6 +7,20 @@ module.exports = {
         test: /\.(ts|tsx)$/,
         loaders: 'babel-loader',
         include: resolve(__dirname, '../')
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader"
+          },
+          {
+            loader: "sass-loader"
+          }
+        ]
       }
     ]
   },
