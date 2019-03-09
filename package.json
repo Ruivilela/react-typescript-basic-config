@@ -7,8 +7,13 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server --mode development --open --hot",
-    "lint": "tslint -c .eslintrc.json src/**/*.ts?(x)",
+    "lint": "tslint -c .eslintrc.json src/**/*.ts?{x}",
     "storybook": "start-storybook"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -18,6 +23,7 @@
     "@types/react-dom": "^16.8.2",
     "babel-loader": "^8.0.5",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.3.1",
     "ts-loader": "^5.3.3",
     "tslint": "^5.13.1",
     "tslint-eslint-rules-recommended": "^1.2.0",
