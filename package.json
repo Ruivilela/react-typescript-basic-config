@@ -7,12 +7,16 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server --mode development --open --hot",
-    "lint": "tslint -c .eslintrc.json src/**/*.ts?(x)"
+    "lint": "tslint -c .eslintrc.json src/**/*.ts?(x)",
+    "storybook": "start-storybook"
   },
   "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@storybook/react": "^5.0.1",
     "@types/node": "^11.11.0",
     "@types/react": "^16.8.7",
     "@types/react-dom": "^16.8.2",
+    "babel-loader": "^8.0.5",
     "html-webpack-plugin": "^3.2.0",
     "ts-loader": "^5.3.3",
     "tslint": "^5.13.1",
