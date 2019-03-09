@@ -1,10 +1,13 @@
+const { resolve } = require('path');
+
 module.exports = {
   module: {
     rules: [
-        {
-            test: /\.(ts|tsx)$/,
-            loader: 'ts-loader'
-        }
+      {
+        test: /\.(ts|tsx)$/,
+        loaders: 'babel-loader',
+        include: resolve(__dirname, '../')
+      }
     ]
   },
   resolve: {

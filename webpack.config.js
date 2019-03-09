@@ -14,11 +14,18 @@ module.exports = {
   },
   module: {
     rules: [
-        {
-            test: /\.(ts|tsx)$/,
-            loader: 'ts-loader'
-        }
+      {
+        test: /\.(ts|tsx)$/,
+        loaders: 'babel-loader',
+        include: resolve(__dirname, '../')
+      }
     ]
+  },
+  devServer: {
+    port: 2711,
+    host: '127.0.0.1',
+    hot: true,
+    open: true
   },
   plugins: [
     new HtmlWebpackPlugin(
