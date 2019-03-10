@@ -2,7 +2,6 @@ require('webpack');
 const { resolve, join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 module.exports = {
   mode: 'development',
   entry: './src/index.tsx',
@@ -27,7 +26,12 @@ module.exports = {
             loader: "style-loader"
           },
           {
-            loader: "css-loader"
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+              modules: true,
+              localIdentName: "[name]__[local]___[hash:base64:5]"
+            }
           },
           {
             loader: "sass-loader"

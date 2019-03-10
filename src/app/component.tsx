@@ -1,7 +1,8 @@
 import React from 'react';
+import s from './styles.scss';
 
 export default () => (
-  <div>
+  <div className={s.test}>
     {'something'}
   </div>
 );
