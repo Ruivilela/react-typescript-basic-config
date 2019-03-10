@@ -1,5 +1,5 @@
 ---
-to: <%= root %>/<%= path %>/tests/snaphsot.tsx
+to: <%= root %>/<%= path %>/__tests__/snapshot.tsx
 ---
 import React from 'react';
 import renderer from 'react-test-renderer';

@@ -1,5 +1,5 @@
 ---
-to: <%= root %>/<%= path %>/tests/stories.tsx
+to: <%= root %>/<%= path %>/__tests__/stories.tsx
 ---
 import React from 'react';
 import { storiesOf } from '@storybook/react';

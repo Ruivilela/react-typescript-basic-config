@@ -22,7 +22,7 @@
   "jest": {
     "collectCoverageFrom": [
       "src/app/**/*.{ts,tsx}",
-      "!**/tests/*.{ts,tsx,snap}"
+      "!**/__tests__/*.{ts,tsx,snap}"
     ],
     "coverageThreshold": {
       "global": {
@@ -33,7 +33,7 @@
       }
     },
     "testMatch": [
-      "**/tests/snapshot.{ts,tsx}"
+      "**/__tests__/snapshot.{ts,tsx}"
     ],
     "transform": {
       "^.+\\.[j|t]sx?$": "babel-jest"
