@@ -37,6 +37,9 @@
     "transform": {
       "^.+\\.[j|t]sx?$": "babel-jest"
     },
+    "moduleNameMapper": {
+      "\\.(scss|css)$": "<rootDir>/__mocks__/styleMock.js"
+    },
     "snapshotResolver": "./scripts/snapshotResolver.js"
   },
   "devDependencies": {
